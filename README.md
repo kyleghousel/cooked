@@ -7,5 +7,4 @@
 - Edit footer
 - Set size min/max limits for certain UI elements
 - Create load state
-- Figure out how to display a React project on GitHub pages...
 - Handle error states for failed requests?
