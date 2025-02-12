@@ -2,7 +2,7 @@
   "name": "cooked",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kylghousel.github.io/cooked",
+  "homepage": "https://kyleghousel.github.io/cooked/",
   "type": "module",
   "scripts": {
     "dev": "vite",
