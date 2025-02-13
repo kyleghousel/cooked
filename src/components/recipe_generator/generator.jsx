@@ -45,8 +45,8 @@ const RecipeGenerator = () => {
 
 
     return (
-        <div className="flex flex-col justify-start items-center gap-4 flex-none">
-            <div className="static top-0 z-10 bg-white shadow-md p-4 flex flex-col items-center space-y-4">
+        <div className="flex flex-col justify-start items-center gap-4 h-4/5">
+            <div className="static top-0 bg-white shadow-md p-4 flex flex-col items-center space-y-4">
                 <div className="flex flex-row justify-center p-2 gap-2">
                     <label htmlFor="cuisines" className="flex self-center">Get Started:</label>
                     <select
@@ -80,15 +80,15 @@ const RecipeGenerator = () => {
             </div>
 
             {recipe && (
-                <div className="flex flex-row">
-                    <div className="flex flex-col text-center mt-4 p-10">
-                        <h2 className="text-xl font-bold">{recipe.strMeal}</h2>
+                <div className="flex flex-col sm:flex-row max-h-96">
+                    <div className="flex flex-col text-center p-10 sm:p-5 shadow-xl bg-white overflow-y-auto w-auto sm:w-1/5 h-3/6 sm:h-auto">
+                        <h2 className="text-base sm:text-lg font-bold">{recipe.strMeal}</h2>
                         <img
                             src={recipe.strMealThumb}
                             alt={recipe.strMeal}
                             className="w-50 h-50 rounded-lg shadow-md mt-2"
                         />
-                        <h3 className="text-xl pt-2 pb-2">Ingredients</h3>
+                        <h3 className="text-m pt-2 pb-2">Ingredients</h3>
                         <ul className="list-disc list-outside text-sm flex flex-col justify-start content-start">
                             {Object.keys(recipe)
                                 .filter(key => key.startsWith("strIngredient") && recipe[key])
@@ -98,8 +98,8 @@ const RecipeGenerator = () => {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col p-10 ml-10 mr-10">
-                        <h3 className="text-xl text-center pb-5">Instructions</h3>
+                    <div className="flex flex-col mt-5 sm:mt-0 ml-0 sm:ml-5 mr-0 sm:mr-5 p-10 sm:p-5 shadow-xl bg-white overflow-y-auto w-auto sm:w-4/5 h-3/6 sm:h-auto">
+                        <h3 className="text-base md:text-lg text-center pb-5 font-bold">Instructions</h3>
                         <p>{recipe.strInstructions}</p>
                         <br></br>
                         {["Vegetarian", "Vegan", "Seafood"].includes(recipe.strCategory) && (
