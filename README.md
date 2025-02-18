@@ -5,6 +5,5 @@
 ### Still need to do:
 - Add vegetarian and seafood dietary qualifiers that will filter results
 - Edit footer
-- Set size min/max limits for certain UI elements
 - Create load state
 - Handle error states for failed requests?
